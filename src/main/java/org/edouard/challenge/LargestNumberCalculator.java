@@ -12,13 +12,10 @@ public final class LargestNumberCalculator {
 
     public static String getLargestNumber(final List<Integer> numbersList) {
         final List<String> numbersStringsList = convertToStringList(numbersList);
-        numbersStringsList.sort(new Comparator<>() {
-            @Override
-            public int compare(final String x, final String y) {
-                final String xy = x + y;
-                final String yx = y + x;
-                return xy.compareTo(yx);
-            }
+        numbersStringsList.sort((x, y) -> {
+            final String xy = x + y;
+            final String yx = y + x;
+            return xy.compareTo(yx);
         });
         Collections.reverse(numbersStringsList);
         return LargestNumberListToString(numbersStringsList);
