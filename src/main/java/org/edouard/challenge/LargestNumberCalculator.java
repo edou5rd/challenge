@@ -1,4 +1,4 @@
-package org.edouard.challenge.utils;
+package org.edouard.challenge;
 
 import java.util.ArrayList;
 import java.util.Collections;
